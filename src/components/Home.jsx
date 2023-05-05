@@ -122,7 +122,7 @@ const Home = () => {
     <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
       <img
         alt="Food"
-        src="https://images.pexels.com/photos/2679501/pexels-photo-2679501.jpeg?auto=compress&cs=tinysrgb&w=800"
+        src="https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         class="aspect-square w-full rounded-lg object-cover"
       />
 
@@ -142,18 +142,18 @@ const Home = () => {
   </section>
 </div>
 
-        <div class="text-xl justify-center gap-16 mt-4 ">
-        <h1 class="font-bold text-3xl">Hours of Operation</h1>
-            <div class="mt-8">
-            <h1>Monday: 11:00 am - 10:00 pm</h1>
-            <h1>Tuesday: 11:00 am - 10:00 pm</h1>
+        <div class="grid sm:grid-cols-3 text-xl text-white p-4 bg-red-700 justify-center gap-16 mt-4 sm:w-3/4 m-auto">
+        <h1 class="font-bold text-3xl">Hours & Location</h1>
+            <div class="text-md">
+            <h1>Monday: 11 am - 10 pm</h1>
+            <h1>Tuesday: 11 am - 10 pm</h1>
             <h1>Wednesday: closed</h1>
-            <h1>Thursday: 11:00 am - 10:00 pm</h1>
-            <h1>Friday: 11:00 am - 10:00 pm</h1>
-            <h1>Saturday: 11:00 am - 10:00 pm</h1>
-            <h1>Sunnday: 11:00 am - 10:00 pm</h1>
+            <h1>Thursday: 11 am - 10 pm</h1>
+            <h1>Friday: 11 am - 10 pm</h1>
+            <h1>Saturday: 11 am - 10 pm</h1>
+            <h1>Sunnday: 11 am - 10 pm</h1>
             </div>
-            <div class="text-2xl mt-12">
+            <div class="text-2xl">
                 <h1>1654 Main Street</h1>
                 <h1>Foodville, Virginia 22302</h1>
             </div>
