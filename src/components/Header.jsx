@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({items}) => {
 
 
     return (
@@ -29,11 +29,11 @@ const Header = () => {
                         </svg>
                     </button>
 
-                    <a href="/" class="flex">
+                    <Link to="/" class="flex">
                         <img class="h-16 w-52" src="https://i.ibb.co/rf6hyB6/MASALA-HOUSE.png"></img>
                  
                         {/* <span class="p-1 h-10 w-64 text-xl rounded-lg text-amber-400 font-bold bg-red-700">Masala House</span> */}
-                    </a>
+                    </Link>
                 </div>
 
                 <div class="flex flex-1 items-center justify-end gap-8">
@@ -41,27 +41,27 @@ const Header = () => {
                         aria-label="Site Nav"
                         class="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500"
                     >
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
                             class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700"
                         >
                             Home
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/menu"
+                        <Link
+                            to="/menu"
                             class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700"
                         >
                             Menu
-                        </a>
+                        </Link>
 
                     </nav>
 
                     <div class="flex items-center">
                         <div class="flex items-center border-x border-gray-100">
                             <span class="border-e border-e-gray-100">
-                                <a
-                                    href="/cart"
+                                <Link
+                                    to="/cart"
                                     class="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-red-700"
                                 >
                                     <svg
@@ -80,7 +80,7 @@ const Header = () => {
                                     </svg>
 
                                     <span class="sr-only">Cart</span>
-                                </a>
+                                </Link>
                             </span>
 
                      

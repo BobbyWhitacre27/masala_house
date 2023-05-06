@@ -15,7 +15,7 @@ const Home = () => {
 <div class="bg-red-700 px-4 py-3 text-white">
   <p class="text-center text-sm font-medium">
     Order within the next <span id="counter"></span>30:00 minutes and receieve 10% off from your order! <span> </span>
-    <a href="/menu" class="inline-block underline">Click here!</a>
+    <Link to="/menu" class="inline-block underline hover:text-white">Click here!</Link>
   </p>
 </div>
 
@@ -103,7 +103,7 @@ const Home = () => {
       
 
 
-        <a href="/menu"><button
+        <Link to="/menu"><button
           type="submit"
           class="group mt-4 flex w-full items-center m-auto gap-2 rounded-md bg-red-700 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
         >
@@ -111,7 +111,7 @@ const Home = () => {
 
           
         </button>
-        </a>
+        </Link>
     </div>
   </div>
 </section>
