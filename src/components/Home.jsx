@@ -105,9 +105,9 @@ const Home = () => {
 
         <Link to="/menu"><button
           type="submit"
-          class="group mt-4 flex w-full items-center m-auto gap-2 rounded-md bg-red-700 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+          class="group mt-4 flex w-full font-bold items-center justify-center m-auto gap-2 rounded-md bg-red-700 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
         >
-          <span class="text-sm font-medium"> View Menu </span>
+           View Menu 
 
           
         </button>

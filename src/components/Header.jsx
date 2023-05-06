@@ -4,6 +4,30 @@ import { Link, useNavigate } from "react-router-dom";
 const Header = ({items}) => {
 
 
+	const cartWithItems = <Link
+	to="/cart"
+	class="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-red-700"
+>
+	<div class="flex">
+	<svg
+		class="h-4 w-4 mt-1"
+		fill="none"
+		viewBox="0 0 24 24"
+		stroke="currentColor"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+		/>
+	</svg>
+	({items})
+	</div>
+	<span class="sr-only">Cart</span>
+</Link>
+
     return (
 
 
@@ -60,7 +84,7 @@ const Header = ({items}) => {
                     <div class="flex items-center">
                         <div class="flex items-center border-x border-gray-100">
                             <span class="border-e border-e-gray-100">
-                                <Link
+                                {items < 1 ? <Link
                                     to="/cart"
                                     class="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-red-700"
                                 >
@@ -80,9 +104,8 @@ const Header = ({items}) => {
                                     </svg>
 
                                     <span class="sr-only">Cart</span>
-                                </Link>
+                                </Link> : cartWithItems}
                             </span>
-
                      
                         </div>
                     </div>

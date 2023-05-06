@@ -42,6 +42,8 @@ function App() {
 	// Items in cart
 	const [items, setItems] = useState(0)
 
+console.log(items)
+
 	return (
 		<div className="App">
 			<BrowserRouter>
@@ -68,6 +70,7 @@ function App() {
 						setRice={setRice} rice={rice}
 						setVegtables={setVegtables} vegtables={vegtables}
 						setMangoIceCream={setMangoIceCream} mangoIceCream={mangoIceCream}
+						setItems={setItems} items={items}
 					/>} />
 					<Route path="/cart" element={<Cart 
 					setTandoriChickenWings={setTandoriChickenWings} tandoriChickenWings={tandoriChickenWings} 

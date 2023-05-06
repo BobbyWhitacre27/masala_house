@@ -21,6 +21,7 @@ const Menu = ({
 	setRice, rice,
 	setVegtables, vegtables,
 	setMangoIceCream, mangoIceCream,
+	setItems,items
 }) => {
 
 
@@ -96,6 +97,72 @@ const Menu = ({
         window.alert("Palak Paneer added to cart!")
     }
 
+	const handleShahiPaneer = (event) => {
+        var food = shahiPaneer + 1
+        setShahiPaneer(food)
+        window.alert("Shahi Paneer added to cart!")
+    }
+
+	const handleMaliaKofta = (event) => {
+        var food = maliaKofta + 1
+        setMaliaKofta(food)
+        window.alert("Malia Kofta added to cart!")
+    }
+
+	const handleAluGobuMasala = (event) => {
+        var food = aluGobuMasala + 1
+        setAluGobuMasala(food)
+        window.alert("Alu - Gobu Masala added to cart!")
+    }
+
+	const handleMangoChutney = (event) => {
+        var food = mangoChutney + 1
+        setMangoChutney(food)
+        window.alert("Mango Chutney added to cart!")
+    }
+
+	const handleRice = (event) => {
+        var food = rice + 1
+        setRice(food)
+        window.alert("Rice added to cart!")
+    }
+
+	const handleVegetables = (event) => {
+        var food = vegtables + 1
+        setVegtables(food)
+        window.alert("Vegetables added to cart!")
+    }
+
+	const handleMagnoIceCream = (event) => {
+        var food = mangoIceCream + 1
+        setMangoIceCream(food)
+        window.alert("Mango Ice Cream added to cart!")
+    }
+
+	const itemsInCart = [tandoriChickenWings, 
+		vegetableSamosas,
+		paneerPakora,
+		lentilsSoup,
+		nann,
+		garicNaan,
+		roti,
+		chickenTikkaMasala,
+		butterChicken,
+		chickenTandori,
+		chickenCurry,
+		palakPaneer,
+		shahiPaneer,
+		maliaKofta,
+		aluGobuMasala,
+		mangoChutney,
+		rice,
+		vegtables,
+		mangoIceCream]
+
+	const totalItemsInCart = itemsInCart.reduce((partialSum, a) => partialSum + a, 0);
+
+	setItems(totalItemsInCart)
+
     return (
         <section>
             <div><br></br></div>
@@ -124,7 +191,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Paneer Pakora - <span class="italic font-normal">$6.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handlePaneerPakora} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Cheese friiters</p>
             </div>
@@ -132,7 +199,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Lentils Soup - <span class="italic font-normal">$5.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleLentilsSoup} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Savoury with onions, carrots and celery</p>
             </div>
@@ -146,7 +213,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Nann - <span class="italic font-normal">$2.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleNaan} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Regular made from flour</p>
             </div>
@@ -154,7 +221,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Garlic Nann - <span class="italic font-normal">$3.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleGarlicNaan} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Naan with garlic and flavorful seasonings</p>
             </div>
@@ -162,7 +229,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Roti - <span class="italic font-normal">$2.49</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleRoti} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Whole wheat and thin</p>
             </div>
@@ -175,7 +242,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Chicken Tikka Masala - <span class="italic font-normal">$15.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleChickenTikkaMasala} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Juicy marinated chicken served in tangy tomato sauce with onions and peppers, served with a side of rice</p>
             </div>
@@ -183,7 +250,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Butter Chicken - <span class="italic font-normal">$15.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleButterChicken} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Juicy marinated chicken served in tangy tomato sauce, served with a side of rice</p>
             </div>
@@ -191,7 +258,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Chicken Tandori - <span class="italic font-normal">$16.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleChickenTandori} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">White and dark meat spiced chicken, served with a naan and a side of vegetable</p>
             </div>
@@ -199,7 +266,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Chicken Curry - <span class="italic font-normal">$15.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleChickenCurry} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Onion based curry, served with a side of rice</p>
             </div>
@@ -212,7 +279,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Palak Paneer - <span class="italic font-normal">$14.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handlePalakPaneer} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Spinach based cooked with homemade cheese and spices, served with rice</p>
             </div>
@@ -220,7 +287,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Shahi Paneer - <span class="italic font-normal">$14.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleShahiPaneer} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Tangy tomato sauce based with homemade cheese, served with rice</p>
             </div>
@@ -228,7 +295,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Malia Kofta - <span class="italic font-normal">$14.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleMaliaKofta} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Vegtable dumpings in a creamy sauce, served with rice</p>
             </div>
@@ -236,7 +303,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Alu - Gobu Masala- <span class="italic font-normal">$14.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleAluGobuMasala} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Cauliflower and potatoes, served with rice</p>
             </div>
@@ -249,7 +316,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Mango Chutney - <span class="italic font-normal">$3.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleMangoChutney} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Sweet sauce</p>
             </div>
@@ -257,7 +324,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Rice - <span class="italic font-normal">$2.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleRice} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Basmati rice</p>
             </div>
@@ -265,7 +332,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Vegetables - <span class="italic font-normal">$5.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleVegetables} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Green beans, cauliflower, carrots and onions</p>
             </div>
@@ -278,7 +345,7 @@ const Menu = ({
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
                 <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Mango Ice Cream - <span class="italic font-normal">$5.99</span></h1></div>
-                <button class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
+                <button onClick={handleMagnoIceCream} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Sweet ice cream dessert</p>
             </div>
