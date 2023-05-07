@@ -103,7 +103,29 @@ console.log(items)
 					setTotalCost={setTotalCost} totalCost={totalCost}
 					setSpecial={setSpecial} special={special} 
 					/>} />
-					<Route path="/checkout" element={<Checkout 	setTotalCost={setTotalCost} totalCost={totalCost} />} />
+					<Route path="/checkout" element={<Checkout 	
+					setTotalCost={setTotalCost} totalCost={totalCost}
+					setTandoriChickenWings={setTandoriChickenWings} tandoriChickenWings={tandoriChickenWings} 
+					setVegetableSamosas={setVegetableSamosas} vegetableSamosas={vegetableSamosas}
+					setPaneerPakora={setPaneerPakora} paneerPakora={paneerPakora}
+					setLentilsSoup={setLentilsSoup} lentilsSoup={lentilsSoup}
+					setNaan={setNaan} nann={nann}
+					setGarlicNaan={setGarlicNaan} garicNaan={garicNaan}
+					setRoti={setRoti} roti={roti}
+					setChickenTikkaMasala={setChickenTikkaMasala} chickenTikkaMasala={chickenTikkaMasala}
+					setButterChicken={setButterChicken} butterChicken={butterChicken}
+					setChickenTandori={setChickenTandori} chickenTandori={chickenTandori}
+					setChickenCurry={setChickenCurry} chickenCurry={chickenCurry}
+					setPalakPaneer={setPalakPaneer} palakPaneer={palakPaneer}
+					setShahiPaneer={setShahiPaneer} shahiPaneer={shahiPaneer}
+					setMaliaKofta={setMaliaKofta} maliaKofta={maliaKofta}
+					setAluGobuMasala={setAluGobuMasala} aluGobuMasala={aluGobuMasala}
+					setMangoChutney={setMangoChutney} mangoChutney={mangoChutney}
+					setRice={setRice} rice={rice}
+					setVegtables={setVegtables} vegtables={vegtables}
+					setMangoIceCream={setMangoIceCream} mangoIceCream={mangoIceCream}
+					setItems={setItems} items={items}
+					setSpecial={setSpecial} special={special}  />} />
 				</Routes>
 				<footer><Footer></Footer></footer>
 			</BrowserRouter>

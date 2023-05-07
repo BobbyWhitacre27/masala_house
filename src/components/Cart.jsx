@@ -103,10 +103,6 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 		vegetablesCost,
 		mangoIceCreamCost]
 
-	const itemsBeingOrdered = itemsInCart.map((a) => a > 0)
-
-	console.log({ itemsBeingOrdered })
-
 	const totalItemsInCart = itemsInCart.reduce((partialSum, a) => partialSum + a, 0);
 
 	const subtotalPrice = costOfItemsInCart.reduce((partialSum, a) => partialSum + a, 0);
@@ -127,7 +123,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const tandoriChickenWingsItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Tandori Chicken Wings - <span class="italic font-normal">${tandoriChickenWingsCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Tandori Chicken Wings - <span class="italic font-normal">$12.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -168,7 +164,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const vegetableSamosasItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Vegetable Samosas - <span class="italic font-normal">${vegetableSamosasCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Vegetable Samosas - <span class="italic font-normal">$5.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -208,7 +204,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const paneerPakoraItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Paneer Pakora - <span class="italic font-normal">${paneerPakoraCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Paneer Pakora - <span class="italic font-normal">$6.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -248,7 +244,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const lentilsSoupItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Lentils Soup - <span class="italic font-normal">${lentilsSoupCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Lentils Soup - <span class="italic font-normal">$5.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -288,7 +284,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const nannItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Naan - <span class="italic font-normal">${nannCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Naan - <span class="italic font-normal">$2.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -328,7 +324,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const garlicNannItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Garlic Naan - <span class="italic font-normal">${garicNannCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Garlic Naan - <span class="italic font-normal">$3.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -368,7 +364,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const rotiItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Roti - <span class="italic font-normal">${rotiCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Roti - <span class="italic font-normal">$2.49 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -408,7 +404,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const chickenTikkaMasalaItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Chicken Tikka Masala - <span class="italic font-normal">${chickenTikkaMasalaCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Chicken Tikka Masala - <span class="italic font-normal">$15.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -448,7 +444,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const butterChickenItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Butter Chicken - <span class="italic font-normal">${butterChickenCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Butter Chicken - <span class="italic font-normal">$15.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -488,7 +484,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const chickenTandoriItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Chicken Tandori - <span class="italic font-normal">${chickenTandoriCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Chicken Tandori - <span class="italic font-normal">$16.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -528,7 +524,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const chickenCurryItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Chicken Curry - <span class="italic font-normal">${chickenCurryCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Chicken Curry - <span class="italic font-normal">$15.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -568,7 +564,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const palakPaneerItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Palak Paneer - <span class="italic font-normal">${palakPaneerCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Palak Paneer - <span class="italic font-normal">$14.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -608,7 +604,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const shahiPannerItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Shahi Paneer - <span class="italic font-normal">${shahiPaneerCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Shahi Paneer - <span class="italic font-normal">$14.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -648,7 +644,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const maliaKoftaItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Malia Kofta - <span class="italic font-normal">${maliaKoftaCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Malia Kofta - <span class="italic font-normal">$14.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -688,7 +684,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const aluGobuMasalaItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Alu - Gobu Masala - <span class="italic font-normal">${aluGobuMasalaCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Alu - Gobu Masala - <span class="italic font-normal">$14.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -728,7 +724,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const mangoChutneyItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Mango Chutney - <span class="italic font-normal">${mangoChutneyCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Mango Chutney - <span class="italic font-normal">$3.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -768,7 +764,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const riceItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Rice - <span class="italic font-normal">${riceCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Rice - <span class="italic font-normal">$2.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -808,7 +804,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const vegetablesItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Vegetables - <span class="italic font-normal">${vegetablesCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Vegetables - <span class="italic font-normal">$5.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -848,7 +844,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const mangoIceCreamItem = <li class="flex items-center gap-4">
 		<div>
-			<h3 class="text-xl font-bold text-gray-900">Mango Ice Cream - <span class="italic font-normal">${mangoIceCreamCost.toFixed(2)}</span></h3>
+			<h3 class="text-xl font-bold text-gray-900">Mango Ice Cream - <span class="italic font-normal">$5.99 ea.</span></h3>
 		</div>
 
 		<div class="flex flex-1 items-center justify-end gap-2">
@@ -885,6 +881,28 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 			</button>
 		</div>
 	</li>
+
+	// const actualCart = JSON.stringify(
+	// 	tandoriChickenWings > 0 ? tandoriChickenWingsItem : "",
+	// 	vegetableSamosas > 0 ? vegetableSamosasItem : "",
+	// 	paneerPakora > 0 ? paneerPakoraItem : "",
+	// 	lentilsSoup > 0 ? lentilsSoupItem : "",
+	// 	nann > 0 ? nannItem : "",
+	// 	garicNaan > 0 ? garlicNannItem : "",
+	// 	roti > 0 ? rotiItem : "",
+	// 	chickenTikkaMasala > 0 ? chickenTikkaMasalaItem : "",
+	// 	butterChicken > 0 ? butterChickenItem : "",
+	// 	chickenTandori > 0 ? chickenTandoriItem : "",
+	// 	chickenCurry > 0 ? chickenCurryItem : "",
+	// 	palakPaneer > 0 ? palakPaneerItem : "",
+	// 	shahiPaneer > 0 ? shahiPannerItem : "",
+	// 	maliaKofta > 0 ? maliaKoftaItem : "",
+	// 	aluGobuMasala > 0 ? aluGobuMasalaItem : "",
+	// 	mangoChutney > 0 ? mangoChutneyItem : "",
+	// 	rice > 0 ? riceItem : "",
+	// 	vegtables > 0 ? vegetablesItem : "",
+	// 	mangoIceCream > 0 ? mangoIceCreamItem : ""
+	// )
 
 	return (
 		<section>

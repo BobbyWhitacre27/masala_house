@@ -62,7 +62,7 @@ const Header = ({items}) => {
 						<div class="mt-16">
 							<Link onClick={() => setDropDown(false)} to="/" class="text-white text-center text-2xl underline mt-2 pr-2">Home</Link>
 							<Link onClick={() => setDropDown(false)} to="/menu" class="text-white text-center text-2xl underline mt-2 pl-2 pr-2">Menu</Link>
-							<Link onClick={() => setDropDown(false)} to="/menu" class="text-white text-center text-2xl underline mt-2 pl-2">Cart</Link>
+							<Link onClick={() => setDropDown(false)} to="/cart" class="text-white text-center text-2xl underline mt-2 pl-2">Cart</Link>
 							</div>
 					</div> : ""}
 
