@@ -111,7 +111,7 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 
 	const subtotalPrice = costOfItemsInCart.reduce((partialSum, a) => partialSum + a, 0);
 
-	const discount = (subtotalPrice * .1);
+	const discount = special === true ? (subtotalPrice * .1) : 0;
 
 	const subtotalPriceMinusDiscount = subtotalPrice - discount
 
@@ -928,10 +928,11 @@ const Cart = ({ setTandoriChickenWings, tandoriChickenWings,
 											<dd>${subtotalPrice.toFixed(2)}</dd>
 										</div>
 
+										{special === true ? 
 										<div class="flex justify-between">
 											<dt>Discount (10%)</dt>
 											<dd>-${discount.toFixed(2)}</dd>
-										</div>
+										</div> : ""}
 
 										<div class="flex justify-between">
 											<dt>Tax (5%)</dt>

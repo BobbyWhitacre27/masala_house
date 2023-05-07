@@ -9,11 +9,12 @@ const Footer = () => {
 
 <footer aria-label="Site Footer" class="bg-white">
   <div class="max-w-screen-xl px-4 mb-12 mx-auto sm:px-6 lg:px-8">
-
+	
 
     <div
       class="pt-8 mt-12 border-t border-gray-100 sm:flex sm:items-center sm:justify-between lg:mt-12"
     >
+		<h1 class="text-xs text-gray-500 mb-8 sm:mb-0">Created by Bobby Whitacre</h1>
       <nav aria-label="Footer Navigation - Support">
         <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
           <li>

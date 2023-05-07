@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({items}) => {
+	const [dropDown, setDropDown] = useState(false)
+
+
 
 
 	const cartWithItems = <Link
@@ -36,7 +39,7 @@ const Header = ({items}) => {
                 class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8"
             >
                 <div class="flex items-center gap-4">
-                    <button type="button" class="p-2 lg:hidden">
+                    <button type="button" class="p-2 lg:hidden" onClick={() => setDropDown(true)}>
                         <svg
                             class="h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +55,16 @@ const Header = ({items}) => {
                             />
                         </svg>
                     </button>
+					{dropDown === true ?
+					<div class="absolute w-full h-32 bg-red-700">
+						<img onClick={() => setDropDown(false)} class="absolute w-12 left-4 top-14" src="https://freesvg.org/img/close-button.png" />
+
+						<div class="mt-16">
+							<Link onClick={() => setDropDown(false)} to="/" class="text-white text-center text-2xl underline mt-2 pr-2">Home</Link>
+							<Link onClick={() => setDropDown(false)} to="/menu" class="text-white text-center text-2xl underline mt-2 pl-2 pr-2">Menu</Link>
+							<Link onClick={() => setDropDown(false)} to="/menu" class="text-white text-center text-2xl underline mt-2 pl-2">Cart</Link>
+							</div>
+					</div> : ""}
 
                     <Link to="/" class="flex">
                         <img class="h-16 w-52" src="https://i.ibb.co/rf6hyB6/MASALA-HOUSE.png"></img>

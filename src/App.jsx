@@ -6,6 +6,7 @@ import Home from './components/Home.jsx'
 import Menu from './components/Menu.jsx'
 import Cart from './components/Cart.jsx'
 import Footer from './components/Footer.jsx'
+import Checkout from './components/Checkout.jsx'
 
 function App() {
 	// Appetizers
@@ -102,6 +103,7 @@ console.log(items)
 					setTotalCost={setTotalCost} totalCost={totalCost}
 					setSpecial={setSpecial} special={special} 
 					/>} />
+					<Route path="/checkout" element={<Checkout 	setTotalCost={setTotalCost} totalCost={totalCost} />} />
 				</Routes>
 				<footer><Footer></Footer></footer>
 			</BrowserRouter>

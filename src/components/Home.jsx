@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Home = ({setSpecial, special}) => {
+const Home = ({ setSpecial, special }) => {
 
 	const handleSpecial = () => {
 		setSpecial(true)
 	}
+
+	
 
 
 
@@ -14,15 +16,15 @@ const Home = ({setSpecial, special}) => {
 		<section>
 
 
-			{special === false ? <div class="bg-red-700 px-4 py-3 text-white">
+			{/* {special === false ? <div class="bg-red-700 px-4 py-3 text-white">
 				<p class="text-center text-sm font-medium">
-					Order within the next <span id="counter"></span>30:00 minutes and receieve 10% off from your order! <span> </span>
+					Order within the next <div id="timer">30:00</div>30:00 minutes and receieve 10% off from your order! <span> </span>
 					<button onClick={handleSpecial} class="inline-block underline hover:text-white">Click here!</button>
 				</p>
 			</div> : <div class="bg-red-700 px-4 py-3 text-white"><p class="text-center text-sm font-medium">
-					<span id="counter"></span>SPECIAL APPLIED!<span> </span>
-					<Link to="/menu" class="inline-block underline hover:text-white">view menu</Link>
-				</p></div>}
+				<span id="counter"></span>SPECIAL APPLIED!<span> </span>
+				<Link to="/menu" class="inline-block underline hover:text-white">view menu</Link>
+			</p></div>} */}
 
 
 			<section>
@@ -159,8 +161,8 @@ const Home = ({setSpecial, special}) => {
 					<h1>Sunnday: 11 am - 10 pm</h1>
 				</div>
 				<div class="text-2xl">
-					<h1>1654 Main Street</h1>
-					<h1>Foodville, Virginia 22302</h1>
+					<h1>123 Main Street</h1>
+					<h1>Alexandria, Virginia 22302</h1>
 				</div>
 			</div>
 
