@@ -40,9 +40,13 @@ function App() {
 	const [mangoIceCream, setMangoIceCream] = useState(0);
 
 	// Items in cart
-	const [items, setItems] = useState(0)
+	const [items, setItems] = useState(0);
 
-	const [totalCost, setTotalCost] = useState(0)
+	// Special Applied
+	const [special, setSpecial] = useState(false)
+
+	// Total Cost
+	const [totalCost, setTotalCost] = useState(0);
 
 console.log(items)
 
@@ -51,7 +55,7 @@ console.log(items)
 			<BrowserRouter>
 				<header><Header items={items}></Header></header>
 				<Routes>
-					<Route exact path="/" element={<Home />} />
+					<Route exact path="/" element={<Home setSpecial={setSpecial} special={special} />} />
 					<Route path="/menu" element={<Menu
 						setTandoriChickenWings={setTandoriChickenWings} tandoriChickenWings={tandoriChickenWings}
 						setVegetableSamosas={setVegetableSamosas} vegetableSamosas={vegetableSamosas}
@@ -96,6 +100,7 @@ console.log(items)
 					setMangoIceCream={setMangoIceCream} mangoIceCream={mangoIceCream}
 					setItems={setItems} items={items}
 					setTotalCost={setTotalCost} totalCost={totalCost}
+					setSpecial={setSpecial} special={special} 
 					/>} />
 				</Routes>
 				<footer><Footer></Footer></footer>
