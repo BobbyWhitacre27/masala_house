@@ -42,6 +42,8 @@ function App() {
 	// Items in cart
 	const [items, setItems] = useState(0)
 
+	const [totalCost, setTotalCost] = useState(0)
+
 console.log(items)
 
 	return (
@@ -93,6 +95,7 @@ console.log(items)
 					setVegtables={setVegtables} vegtables={vegtables}
 					setMangoIceCream={setMangoIceCream} mangoIceCream={mangoIceCream}
 					setItems={setItems} items={items}
+					setTotalCost={setTotalCost} totalCost={totalCost}
 					/>} />
 				</Routes>
 				<footer><Footer></Footer></footer>

@@ -21,122 +21,122 @@ const Menu = ({
 	setRice, rice,
 	setVegtables, vegtables,
 	setMangoIceCream, mangoIceCream,
-	setItems,items
+	setItems, items
 }) => {
 
 
 	const handleTandoriChickenWings = (event) => {
         var wings = tandoriChickenWings + 1
         setTandoriChickenWings(wings)
-        window.alert("Tandori Chicken Wings added to cart!")
+        // window.alert("Tandori Chicken Wings added to cart!")
     }
 
 	const handleVegetableSamosas = (event) => {
         var food = vegetableSamosas + 1
         setVegetableSamosas(food)
-        window.alert("Vegetable Samosas added to cart!")
+        // window.alert("Vegetable Samosas added to cart!")
     }
 
 	const handlePaneerPakora = (event) => {
         var food = paneerPakora + 1
         setPaneerPakora(food)
-        window.alert("Paneer Pakora added to cart!")
+        // window.alert("Paneer Pakora added to cart!")
     }
     
 	const handleLentilsSoup = (event) => {
         var food = lentilsSoup + 1
         setLentilsSoup(food)
-        window.alert("Lentils Soup added to cart!")
+        // window.alert("Lentils Soup added to cart!")
     }
 
 	const handleNaan = (event) => {
         var food = nann + 1
         setNaan(food)
-        window.alert("Naan added to cart!")
+        // window.alert("Naan added to cart!")
     }
 
 	const handleGarlicNaan = (event) => {
         var food = garicNaan + 1
         setGarlicNaan(food)
-        window.alert("Garlic Naan added to cart!")
+        // window.alert("Garlic Naan added to cart!")
     }
 
 	const handleRoti = (event) => {
         var food = roti + 1
         setRoti(food)
-        window.alert("Roti added to cart!")
+        // window.alert("Roti added to cart!")
     }
 
 	const handleChickenTikkaMasala = (event) => {
         var food = chickenTikkaMasala + 1
         setChickenTikkaMasala(food)
-        window.alert("Chicken Tikka Masala added to cart!")
+        // window.alert("Chicken Tikka Masala added to cart!")
     }
 
 	const handleButterChicken = (event) => {
         var food = butterChicken + 1
         setButterChicken(food)
-        window.alert("Butter Chicken added to cart!")
+        // window.alert("Butter Chicken added to cart!")
     }
 
 	const handleChickenTandori = (event) => {
         var food = chickenTandori + 1
         setChickenTandori(food)
-        window.alert("Chicken Tandori added to cart!")
+        // window.alert("Chicken Tandori added to cart!")
     }
 
 	const handleChickenCurry = (event) => {
         var food = chickenCurry + 1
         setChickenCurry(food)
-        window.alert("Chicken Curry added to cart!")
+        // window.alert("Chicken Curry added to cart!")
     }
 
 	const handlePalakPaneer = (event) => {
         var food = palakPaneer + 1
         setPalakPaneer(food)
-        window.alert("Palak Paneer added to cart!")
+        // window.alert("Palak Paneer added to cart!")
     }
 
 	const handleShahiPaneer = (event) => {
         var food = shahiPaneer + 1
         setShahiPaneer(food)
-        window.alert("Shahi Paneer added to cart!")
+        // window.alert("Shahi Paneer added to cart!")
     }
 
 	const handleMaliaKofta = (event) => {
         var food = maliaKofta + 1
         setMaliaKofta(food)
-        window.alert("Malia Kofta added to cart!")
+        // window.alert("Malia Kofta added to cart!")
     }
 
 	const handleAluGobuMasala = (event) => {
         var food = aluGobuMasala + 1
         setAluGobuMasala(food)
-        window.alert("Alu - Gobu Masala added to cart!")
+        // window.alert("Alu - Gobu Masala added to cart!")
     }
 
 	const handleMangoChutney = (event) => {
         var food = mangoChutney + 1
         setMangoChutney(food)
-        window.alert("Mango Chutney added to cart!")
+        // window.alert("Mango Chutney added to cart!")
     }
 
 	const handleRice = (event) => {
         var food = rice + 1
         setRice(food)
-        window.alert("Rice added to cart!")
+        // window.alert("Rice added to cart!")
     }
 
 	const handleVegetables = (event) => {
         var food = vegtables + 1
         setVegtables(food)
-        window.alert("Vegetables added to cart!")
+        // window.alert("Vegetables added to cart!")
     }
 
 	const handleMagnoIceCream = (event) => {
         var food = mangoIceCream + 1
         setMangoIceCream(food)
-        window.alert("Mango Ice Cream added to cart!")
+        // window.alert("Mango Ice Cream added to cart!")
     }
 
 	const itemsInCart = [tandoriChickenWings, 
@@ -212,7 +212,7 @@ const Menu = ({
 
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
-                <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Nann - <span class="italic font-normal">$2.99</span></h1></div>
+                <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Naan - <span class="italic font-normal">$2.99</span></h1></div>
                 <button onClick={handleNaan} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Regular made from flour</p>
@@ -220,7 +220,7 @@ const Menu = ({
 
             <div class="border-3 border-red-700 sm:w-1/2 m-auto p-2 rounded-xl mt-4 mb-4 shadow-xl sm:hover:scale-110 transition duration-200">
                 <div class="flex  justify-between">
-                <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Garlic Nann - <span class="italic font-normal">$3.99</span></h1></div>
+                <div class="sm:flex"><h1 class="p-1 font-bold sm:text-xl text-left">Garlic Naan - <span class="italic font-normal">$3.99</span></h1></div>
                 <button onClick={handleGarlicNaan} class="bg-red-700 sm:p-1 px-2 content-evenly rounded-xl h-8 w-28 mt-1 mb-1 hover:bg-red-200 text-white">Add to Cart</button>
                 </div>
                 <p class="text-left text-gray-500 italic">Naan with garlic and flavorful seasonings</p>
